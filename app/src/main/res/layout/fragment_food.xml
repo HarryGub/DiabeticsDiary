@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="@dimen/frag_food_height">
+
+        <TextView
+            style="@style/TextBlackMini"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/frag_food_name"
+            android:id="@+id/frag_food_name"
+            android:scrollbars="horizontal"
+            android:maxWidth="@dimen/frag_food_width"/>
+
+        <TextView
+            style="@style/TextBlackMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/frag_food_value"
+            android:text="@string/frag_food_value"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintRight_toLeftOf="@+id/frag_food_value_dimension"
+            android:layout_marginEnd="1dp"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            />
+
+
+        <TextView
+            android:id="@+id/frag_food_value_dimension"
+            style="@style/TextBlackMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/frag_food_value_dimension"
+            android:layout_marginVertical="10dp"
+
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            style="@style/TextBlackMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/frag_food_separator"
+            android:text="@string/frag_food_separator"
+            app:layout_constraintTop_toBottomOf="@+id/frag_food_value_dimension"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/frag_food_dimen_value"
+            app:layout_constraintRight_toLeftOf="@+id/frag_food_dimen_value"
+            android:layout_marginHorizontal="1dp"
+            />
+
+        <TextView
+            style="@style/TextBlackMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/frag_food_dimen_value"
+            android:text="@string/frag_food_dimen_value"
+            app:layout_constraintTop_toBottomOf="@+id/frag_food_value_dimension"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginVertical="5dp"
+
+            android:maxWidth="@dimen/frag_food_width"
+            />
+
+
+
+
+
+        <TextView
+            style="@style/TextBlackMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/frag_food_nutrition_header"
+            android:text="БЖУ: "
+            app:layout_constraintTop_toBottomOf="@+id/frag_food_dimen_value"
+            app:layout_constraintRight_toLeftOf="@+id/frag_food_nutrition_protein"
+            android:layout_marginEnd="10dp"
+            android:layout_marginVertical="5dp"
+            android:maxWidth="@dimen/frag_food_width"
+            />
+        <TextView
+            style="@style/TextBlackMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/frag_food_nutrition_protein"
+            android:text="@string/frag_food_dimen_value"
+            app:layout_constraintTop_toBottomOf="@+id/frag_food_dimen_value"
+            app:layout_constraintRight_toLeftOf="@+id/frag_food_nutrition_slash1"
+            android:layout_marginVertical="5dp"
+
+            android:maxWidth="@dimen/frag_food_width"
+            />
+        <TextView
+            style="@style/TextBlackMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/frag_food_nutrition_slash1"
+            android:text="/"
+            app:layout_constraintTop_toBottomOf="@+id/frag_food_dimen_value"
+            app:layout_constraintRight_toLeftOf="@+id/frag_food_nutrition_fat"
+
+            android:layout_marginVertical="5dp"
+
+            android:maxWidth="@dimen/frag_food_width"
+            />
+        <TextView
+            style="@style/TextBlackMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/frag_food_nutrition_fat"
+            android:text="@string/frag_food_dimen_value"
+            app:layout_constraintTop_toBottomOf="@+id/frag_food_dimen_value"
+            app:layout_constraintRight_toLeftOf="@+id/frag_food_nutrition_slash2"
+
+            android:layout_marginVertical="5dp"
+
+            android:maxWidth="@dimen/frag_food_width"
+            />
+        <TextView
+            style="@style/TextBlackMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/frag_food_nutrition_slash2"
+            android:text="/"
+            app:layout_constraintTop_toBottomOf="@+id/frag_food_dimen_value"
+            app:layout_constraintRight_toLeftOf="@+id/frag_food_nutrition_carb"
+
+            android:layout_marginVertical="5dp"
+            android:maxWidth="@dimen/frag_food_width"
+            />
+        <TextView
+            style="@style/TextBlackMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/frag_food_nutrition_carb"
+            android:text="@string/frag_food_dimen_value"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/frag_food_dimen_value"
+            android:maxWidth="@dimen/frag_food_width"
+            />
+
+
+        <TextView
+            style="@style/TextBlackMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/frag_food_xe_header"
+            android:text="XE: "
+            app:layout_constraintTop_toBottomOf="@+id/frag_food_nutrition_carb"
+            app:layout_constraintRight_toLeftOf="@+id/frag_food_xe_val"
+            android:layout_marginVertical="5dp"
+            android:maxWidth="@dimen/frag_food_width"
+            />
+        <TextView
+            style="@style/TextBlackMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/frag_food_xe_val"
+            android:text="@string/frag_food_dimen_value"
+            app:layout_constraintTop_toBottomOf="@+id/frag_food_nutrition_carb"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginVertical="5dp"
+            android:maxWidth="@dimen/frag_food_width"
+            />
+
+
+
+
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="?attr/colorOnSecondary"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

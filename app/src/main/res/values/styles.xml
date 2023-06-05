@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonPinkMain" parent="ThemeOverlay.AppCompat">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+    
+    <style name="TextBlackHeader">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">@dimen/text_header_size</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
+    <style name="TextBlack">
+        <item name="android:layout_marginTop">@dimen/text_body_top_margin</item>
+        <item name="android:textSize">@dimen/text_body_size</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
+    <style name="TextBlackUnconstrained">
+        <item name="android:textSize">@dimen/text_body_size</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+    </style>
+
+    <style name="TextBlackMini">
+        <item name="android:textSize">@dimen/text_mini_size</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+    </style>
+
+    <style name="ButtonAccept">
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+        <item name="android:layout_width">@dimen/button_accept_width</item>
+        <item name="android:layout_height">@dimen/button_accept_height</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:layout_marginBottom">@dimen/button_margin_bottom</item>
+    </style>
+
+    <style name="ButtonDialog">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:layout_marginBottom">@dimen/button_margin_bottom</item>
+    </style>
+
+    <style name="TextNotification">
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="android:textSize">@dimen/text_mini_size</item>
+    </style>
+
+    <style name="TextButtonBlue">
+        <item name="android:textSize">@dimen/text_button_size</item>
+        <item name="android:textColor">?attr/colorSecondaryVariant</item>
+    </style>
+
+    <style name="TextColor">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+    </style>
+    
+    <style name="TextBottomMenu">
+        <item name="itemTextAppearance">@dimen/text_mini_size</item>
+    </style>
+
+    <style name="BottomMenuItemSize">
+        <item name="itemIconSize">@dimen/bottom_menu_item_size</item>
+    </style>
+
+    <style name="TextDrawerMenu">
+        <item name="itemTextAppearance">@dimen/text_body_size</item>
+    </style>
+    <style name="DrawerMenuItemSize">
+        <item name="itemIconSize">@dimen/bottom_menu_item_size</item>
+    </style>
+
+</resources>

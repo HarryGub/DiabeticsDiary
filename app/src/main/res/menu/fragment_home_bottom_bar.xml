@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/bottom_app_bar_home">
+
+    <group
+        android:checkableBehavior="single"
+        android:id="@+id/bottom_bar_menu_group">
+        <item
+            android:id="@+id/nav_bottom_notifications"
+            android:icon="@drawable/notification_icon"
+            android:title="@string/bottom_nav_label_notifications" />
+        <item
+            android:id="@+id/nav_bottom_sugar"
+            android:icon="@drawable/sugar_icon"
+            android:title="@string/bottom_nav_label_sugar"
+            />
+        <item
+            android:id="@+id/nav_bottom_calories"
+            android:icon="@drawable/kalories_icon"
+            android:title="@string/bottom_nav_label_calories" />
+        <item
+            android:id="@+id/nav_bottom_notes"
+            android:icon="@drawable/notes_icon"
+            android:title="@string/bottom_nav_label_notes"/>
+        <item
+            android:id="@+id/nav_bottom_statistics"
+            android:icon="@drawable/statictics_icon"
+            android:title="@string/bottom_nav_label_statistics"/>
+    </group>
+
+</menu>

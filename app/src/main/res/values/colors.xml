@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="app_main_200">#FFFF94E7</color>
+    <color name="app_main_500">#FFFF94E7</color>
+    <color name="app_main_700">#FFFF94E7</color>
+    <color name="app_main_2_200">#FFFF94E7</color>
+    <color name="app_main_2_700">#FFFF94E7</color>
+
+    <color name="app_main">#FFFF94E7</color>
+
+    <color name="red">#AAFF0000</color>
+    <color name="gray">#66000000</color>
+    <color name="blue">#990000FF</color>
+    <color name="light_gray">#15000000</color>
+    <color name="yellow">#FFE5EC1A</color>
+
+
+    <color name="dark_app_main_200">#FFBC51A4</color>
+    <color name="dark_app_main_500">#FFBC51A4</color>
+    <color name="dark_app_main_700">#FFBC51A4</color>
+    <color name="dark_app_main_2_200">#FFBC51A4</color>
+    <color name="dark_app_main_2_700">#FFBC51A4</color>
+
+    <color name="dark_app_main">#FFBC51A4</color>
+
+    <color name="dark_red">#AAFF3F3F</color>
+    <color name="dark_gray">#66676565</color>
+    <color name="dark_blue">#995252FA</color>
+    <color name="dark_light_gray">#15000000</color>
+    <color name="dark_yellow">#B3B817</color>
+
+
+</resources>

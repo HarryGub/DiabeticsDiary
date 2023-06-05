@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            style="@style/TextBlackUnconstrained"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/add_note_dialog_header"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            android:id="@+id/add_note_dialog_header"/>
+
+        <EditText
+            style="@style/TextBlackUnconstrained"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:hint="Введите текст заметки..."
+            app:layout_constraintTop_toBottomOf="@+id/add_note_dialog_header"
+            android:layout_marginVertical="10dp"
+            android:id="@+id/add_note_dialog_note"/>
+
+        <Button
+            style="@style/ButtonPinkMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добавить"
+            android:layout_marginVertical="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/add_note_dialog_note"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:minWidth="300dp"
+            android:id="@+id/add_note_dialog_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

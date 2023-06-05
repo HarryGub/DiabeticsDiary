@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_deletion_dialog_root">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextBlackHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_user_dialog_header"
+            android:id="@+id/user_deletion_dialog_header"
+            />
+        <TextView
+            style="@style/TextBlack"
+            app:layout_constraintTop_toBottomOf="@+id/user_deletion_dialog_header"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_deletion_dialog_body"
+            android:id="@+id/user_deletion_dialog_body"
+            android:layout_marginHorizontal="5dp"/>
+
+        <Button
+            style="@style/ButtonDialog"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_user_delete_cancel"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/user_deletion_dialog_body"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="10dp"
+            android:id="@+id/user_deletion_dialog_cancel"/>
+
+        <Button
+            style="@style/ButtonDialog"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_user_delete_confirm"
+            app:layout_constraintTop_toBottomOf="@+id/user_deletion_dialog_body"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/user_deletion_dialog_confirm"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

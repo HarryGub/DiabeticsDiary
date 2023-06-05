@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".loginactivity.registration.RegistrationFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <TextView
+                style="@style/TextBlackHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registration_header"
+                android:gravity="center"
+                android:id="@+id/reg_fragment_header"/>
+
+            <TextView
+                style="@style/TextBlackMini"
+                android:text="@string/reg_fragment_your_name_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/reg_fragment_header"
+                android:id="@+id/reg_fragment_your_name_header"/>
+
+            <EditText
+                style="@style/TextColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/reg_fragment_your_name_header"
+                android:hint="@string/reg_fragment_your_name_header"
+                android:textSize="26sp"
+                android:inputType="text"
+                android:id="@+id/reg_frag_edit_text_name"
+                android:maxLength="18"/>
+
+            <TextView
+                style="@style/TextNotification"
+                android:text="@string/reg_fragment_your_name_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/reg_frag_edit_text_name"
+                android:id="@+id/reg_fragment_your_name_notification"
+                android:visibility="gone"/>
+
+
+
+            <TextView
+                style="@style/TextBlackMini"
+                android:text="@string/reg_fragment_passwd_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/reg_frag_edit_text_name"
+                android:id="@+id/reg_fragment_passwd_header"/>
+
+            <EditText
+                style="@style/TextColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/reg_fragment_passwd_header"
+                android:hint="@string/reg_frag_edit_text_passwd"
+                android:textSize="26sp"
+                android:id="@+id/reg_frag_edit_text_passwd"
+                android:textColor="@color/black"
+                android:inputType="textPassword"
+                android:maxLength="30"
+                />
+
+            <TextView
+                style="@style/TextNotification"
+                android:text="@string/reg_fragment_passwd_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/reg_frag_edit_text_passwd"
+                android:id="@+id/reg_fragment_passwd_notification"
+                android:visibility="gone"/>
+
+
+
+
+            <TextView
+                style="@style/TextBlackMini"
+                android:text="@string/reg_fragment_passwd_confirm_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/reg_frag_edit_text_passwd"
+                android:id="@+id/reg_fragment_passwd_confirm_header"/>
+
+            <EditText
+                style="@style/TextColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/reg_fragment_passwd_confirm_header"
+                android:hint="@string/reg_frag_edit_text_passwd_confirm"
+                android:textSize="26sp"
+                android:id="@+id/reg_frag_edit_text_passwd_confirm"
+                android:textColor="@color/black"
+                android:inputType="textPassword"
+                android:maxLength="30"
+                />
+
+            <TextView
+                style="@style/TextNotification"
+                android:text="@string/reg_fragment_passwd_confirm_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/reg_frag_edit_text_passwd_confirm"
+                android:id="@+id/reg_fragment_passwd_confirm_notification"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/TextBlackMini"
+                android:text="@string/account_fragment_weight_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/reg_frag_edit_text_passwd_confirm"
+                android:id="@+id/account_fragment_weight_header"/>
+
+            <EditText
+                style="@style/TextBlackMini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:inputType="numberDecimal"
+                android:hint="Вес"
+                android:maxLength="8"
+                android:id="@+id/frag_account_weight_edit_text"
+                app:layout_constraintBaseline_toBaselineOf="@+id/account_fragment_weight_header"
+                app:layout_constraintRight_toLeftOf="@+id/frag_account_kg"
+                app:layout_constraintTop_toBottomOf="@+id/reg_frag_edit_text_passwd_confirm"
+
+                />
+
+            <TextView
+                style="@style/TextBlackMini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/account_fragment_weight_header"
+                android:text="@string/kg"
+                app:layout_constraintTop_toBottomOf="@+id/reg_frag_edit_text_passwd_confirm"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/frag_account_kg"
+                />
+
+
+            <TextView
+                style="@style/TextBlackMini"
+                android:text="@string/reg_fragment_avatar_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/frag_account_kg"
+                android:id="@+id/reg_fragment_avatar_header"/>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/reg_fragment_avatar_header"
+                android:layout_marginTop="10dp"
+                android:id="@+id/reg_fragment_avatar_constraint_view">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/reg_fragment_load_avatar_image"
+                    android:src="@drawable/default_avatar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <Button
+                    style="@style/TextColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reg_fragment_load_avatar_button"
+                    android:id="@+id/reg_fragment_load_avatar_button"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="26sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                style="@style/TextButtonBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/reg_fragment_import_text_view"
+                app:layout_constraintTop_toBottomOf="@id/reg_fragment_avatar_constraint_view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/reg_frag_text_button_import"/>
+
+
+            <Button
+                style="@style/ButtonAccept"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/reg_frag_text_button_import"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/fragment_registration_button_register"
+                android:id="@+id/fragment_registration_button_register" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</FrameLayout>

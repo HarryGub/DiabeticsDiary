@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/nav_bottom_sugar">
+
+    <fragment
+        android:id="@+id/nav_bottom_notifications"
+        android:name="com.shifuu.diabeticsdiary.mainactivity.home.notifications.NotificationsFragment"
+        android:label="@string/bottom_nav_label_notifications"
+        tools:layout="@layout/fragment_notifications">
+
+        <action
+            android:id="@+id/action_nav_bottom_notifications_to_nav_bottom_statistics"
+            app:destination="@id/nav_bottom_statistics" />
+        <action
+            android:id="@+id/action_nav_bottom_notifications_to_nav_bottom_calories"
+            app:destination="@id/nav_bottom_calories" />
+        <action
+            android:id="@+id/action_nav_bottom_notifications_to_nav_bottom_sugar"
+            app:destination="@id/nav_bottom_sugar" />
+        <action
+            android:id="@+id/action_nav_bottom_notifications_to_notesFragment"
+            app:destination="@id/nav_bottom_sugar" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_bottom_sugar"
+        android:name="com.shifuu.diabeticsdiary.mainactivity.home.sugar.SugarFragment"
+        android:label="@string/bottom_nav_label_sugar"
+        tools:layout="@layout/fragment_sugar">
+
+        <action
+            android:id="@+id/action_nav_bottom_sugar_to_nav_bottom_calories"
+            app:destination="@id/nav_bottom_calories" />
+        <action
+            android:id="@+id/action_nav_bottom_sugar_to_nav_bottom_statistics"
+            app:destination="@id/nav_bottom_statistics" />
+        <action
+            android:id="@+id/action_nav_bottom_sugar_to_nav_bottom_notifications"
+            app:destination="@id/nav_bottom_notifications" />
+        <action
+            android:id="@+id/action_nav_bottom_sugar_to_notesFragment"
+            app:destination="@id/nav_bottom_sugar" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_bottom_calories"
+        android:name="com.shifuu.diabeticsdiary.mainactivity.home.calories.CaloriesFragment"
+        android:label="@string/bottom_nav_label_calories"
+        tools:layout="@layout/fragment_calories">
+
+        <action
+            android:id="@+id/action_nav_bottom_calories_to_nav_bottom_sugar"
+            app:destination="@id/nav_bottom_sugar" />
+        <action
+            android:id="@+id/action_nav_bottom_calories_to_nav_bottom_notifications"
+            app:destination="@id/nav_bottom_notifications" />
+        <action
+            android:id="@+id/action_nav_bottom_calories_to_nav_bottom_statistics"
+            app:destination="@id/nav_bottom_statistics" />
+        <action
+            android:id="@+id/action_nav_bottom_calories_to_notesFragment"
+            app:destination="@id/nav_bottom_sugar" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_bottom_statistics"
+        android:name="com.shifuu.diabeticsdiary.mainactivity.home.statistics.StatisticsFragment"
+        android:label="@string/bottom_nav_label_statistics"
+        tools:layout="@layout/fragment_statistics">
+
+        <action
+            android:id="@+id/action_nav_bottom_statistics_to_nav_bottom_calories"
+            app:destination="@id/nav_bottom_calories" />
+        <action
+            android:id="@+id/action_nav_bottom_statistics_to_nav_bottom_sugar"
+            app:destination="@id/nav_bottom_sugar" />
+        <action
+            android:id="@+id/action_nav_bottom_statistics_to_nav_bottom_notifications"
+            app:destination="@id/nav_bottom_notifications" />
+        <action
+            android:id="@+id/action_nav_bottom_statistics_to_notesFragment"
+            app:destination="@id/nav_bottom_sugar" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_bottom_notes"
+        android:name="com.shifuu.diabeticsdiary.mainactivity.home.notes.NotesFragment"
+        android:label="fragment_notes"
+        tools:layout="@layout/fragment_notes" >
+        <action
+            android:id="@+id/action_notesFragment_to_nav_bottom_sugar"
+            app:destination="@id/nav_bottom_sugar" />
+        <action
+            android:id="@+id/action_notesFragment_to_nav_bottom_statistics"
+            app:destination="@id/nav_bottom_statistics" />
+        <action
+            android:id="@+id/action_notesFragment_to_nav_bottom_notifications"
+            app:destination="@id/nav_bottom_notifications" />
+    </fragment>
+
+
+</navigation>

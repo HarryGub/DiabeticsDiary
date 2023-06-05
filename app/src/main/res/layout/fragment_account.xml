@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainactivity.account.AccountFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frag_passwd_login_scroll_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <TextView
+                style="@style/TextBlackHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/frag_account_header"
+                android:gravity="center"
+                android:id="@+id/frag_account_header"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/avatar_size_large"
+                android:layout_height="@dimen/avatar_size_large"
+                android:layout_marginTop="@dimen/text_body_top_margin"
+                app:layout_constraintTop_toBottomOf="@+id/frag_account_header"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/frag_account_avatar"
+                />
+
+            <TextView
+                style="@style/TextColor"
+                android:textSize="32sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/frag_delete_name"
+                app:layout_constraintTop_toBottomOf="@+id/frag_account_avatar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/frag_account_name"
+                />
+
+            <TextView
+                style="@style/TextBlackUnconstrained"
+                android:text="@string/account_fragment_weight_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/frag_account_name"
+                android:id="@+id/account_fragment_weight_header"/>
+
+            <EditText
+                style="@style/TextBlackUnconstrained"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:inputType="numberDecimal"
+                android:maxLength="8"
+                android:id="@+id/frag_account_weight_edit_text"
+                app:layout_constraintBaseline_toBaselineOf="@+id/account_fragment_weight_header"
+                app:layout_constraintRight_toLeftOf="@+id/frag_account_kg"
+                app:layout_constraintTop_toBottomOf="@+id/frag_account_name"
+
+                />
+
+            <TextView
+                style="@style/TextBlackUnconstrained"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/account_fragment_weight_header"
+                android:text="@string/kg"
+                app:layout_constraintTop_toBottomOf="@+id/frag_account_name"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/frag_account_kg"
+                />
+
+            <Button
+                style="@style/ButtonAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/account_fragment_weight_header"
+                android:text="@string/fragment_account_change_weight_button"
+                android:layout_marginTop="20dp"
+                android:id="@+id/fragment_account_change_weight_button"/>
+
+
+            <TextView
+                style="@style/TextBlackMini"
+                android:text="@string/frag_account_change_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_account_change_weight_button"
+                android:id="@+id/account_fragment_avatar_header"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/account_fragment_avatar_header"
+                android:layout_marginTop="10dp"
+                android:id="@+id/account_fragment_avatar_constraint_view">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/account_fragment_load_avatar_image"
+                    android:src="@drawable/default_avatar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <Button
+                    style="@style/TextColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reg_fragment_load_avatar_button"
+                    android:id="@+id/account_fragment_load_avatar_button"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="26sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                style="@style/ButtonAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/account_fragment_avatar_constraint_view"
+                android:text="@string/frag_account_write_avatar"
+                android:layout_marginTop="20dp"
+                android:id="@+id/fragment_account_change_avatar_button"/>
+
+            <Button
+                style="@style/ButtonAccept"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_account_change_avatar_button"
+                android:text="@string/frag_account_exit_button"
+                android:layout_marginTop="10dp"
+                android:id="@+id/fragment_account_logout_button"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

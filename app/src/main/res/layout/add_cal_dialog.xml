@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/add_cal_dialog_root"
+    android:background="?android:windowBackground">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/add_cal_dialog_height"
+                >
+
+                <TextView
+                    style="@style/TextBlackUnconstrained"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/add_cal_dialog_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_cal_dialog_fragment_header"/>
+
+                <TextView
+                    style="@style/TextBlackUnconstrained"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/add_cal_dialog_fragment_header"
+                    android:text="@string/add_cal_dialog_date"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_cal_dialog_fragment_date"/>
+
+                <TextView
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/add_cal_dialog_fragment_header"
+                    android:text="@string/default_date"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_body_size"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:id="@+id/add_cal_dialog_fragment_date_value"/>
+
+
+                <TextView
+                    style="@style/TextBlackUnconstrained"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/add_cal_dialog_fragment_date"
+                    android:text="@string/frag_add_cal_time"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_cal_dialog_fragment_time"/>
+
+                <TextView
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/add_cal_dialog_fragment_date"
+                    android:text="@string/default_time"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_body_size"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:id="@+id/add_cal_dialog_fragment_time_value"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:layout_marginHorizontal="1dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/add_cal_dialog_fragment_time"
+                    android:id="@+id/frag_add_cal_scroll_view"
+                    android:background="@color/light_gray">
+
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <TextView
+                    style="@style/TextBlackUnconstrained"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/frag_add_cal_scroll_view"
+                    android:text="@string/frag_add_cal_total_calories"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_cal_dialog_fragment_total"/>
+
+                <TextView
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/frag_add_cal_scroll_view"
+                    android:text="@string/default_total_cal"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_body_size"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:id="@+id/add_cal_dialog_fragment_total_value"/>
+
+                <EditText
+                    style="@style/TextBlackUnconstrained"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Заметка"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/add_cal_dialog_frag_note"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/add_cal_dialog_fragment_total_value"/>
+
+                <Button
+                    style="@style/ButtonPinkMain"
+                    android:backgroundTint="?attr/yellow_color"
+                    android:textSize="22sp"
+                    android:textColor="?attr/colorOnSecondary"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/add_cal_dialog_frag_note"
+                    android:id="@+id/frag_add_cal_button_add_food"
+                    android:text="@string/frag_add_cal_button_add_food"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="5dp"
+                    android:minWidth="300dp"
+                    />
+
+                <Button
+                    style="@style/ButtonPinkMain"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/frag_add_cal_button_add_food"
+                    android:id="@+id/frag_add_cal_button_add_record"
+                    android:text="@string/frag_add_cal_button_add_record"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="5dp"
+                    android:minWidth="300dp"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+
+</FrameLayout>

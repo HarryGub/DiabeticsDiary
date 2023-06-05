@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@+id/fragment_welcome">
+
+
+    <fragment
+        android:id="@+id/fragment_welcome"
+        android:name="com.shifuu.diabeticsdiary.loginactivity.welcome.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_fragment_welcome_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_fragment_welcome_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.shifuu.diabeticsdiary.loginactivity.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_passwordLoginFragment"
+            app:destination="@id/passwordLoginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_deleteUserFragment"
+            app:destination="@id/deleteUserFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/passwordLoginFragment"
+        android:name="com.shifuu.diabeticsdiary.loginactivity.passwordlogin.PasswordLoginFragment"
+        android:label="fragment_password_login"
+        tools:layout="@layout/fragment_password_login" >
+        <argument
+            android:name="userId"
+            app:argType="long"
+            android:defaultValue="0L"/>
+    </fragment>
+    <fragment
+        android:id="@+id/deleteUserFragment"
+        android:name="com.shifuu.diabeticsdiary.loginactivity.deleteuser.DeleteUserFragment"
+        android:label="fragment_delete_user"
+        tools:layout="@layout/fragment_delete_user" >
+        <argument
+            android:name="userId"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/importUserFragment"
+        android:name="com.shifuu.diabeticsdiary.loginactivity.importuser.ImportUserFragment"
+        android:label="fragment_import_user"
+        tools:layout="@layout/fragment_import_user" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.shifuu.diabeticsdiary.loginactivity.registration.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_importUserFragment"
+            app:destination="@id/importUserFragment" />
+    </fragment>
+
+
+</navigation>

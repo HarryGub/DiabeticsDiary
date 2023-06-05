@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".loginactivity.importuser.ImportUserFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextBlackHeader"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Перенос данных"
+                android:gravity="center"
+                android:id="@+id/frag_import_header"/>
+            <TextView
+                style="@style/TextBlack"
+                app:layout_constraintTop_toBottomOf="@+id/frag_import_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/frag_import_body"
+                android:gravity="center"
+                android:id="@+id/frag_import_body"/>
+            <TextView
+                style="@style/TextBlackUnconstrained"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/frag_import_text_margin"
+                android:layout_marginHorizontal="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Выбранный файл:"
+                android:gravity="center"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frag_import_body"
+                android:id="@+id/frag_import_file_name"/>
+            <TextView
+                style="@style/TextBlackUnconstrained"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Файл не выбран..."
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textStyle="italic"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frag_import_file_name"
+                android:id="@+id/frag_import_file_name_val"
+                android:background="@color/light_gray"
+                android:maxWidth="200dp"/>
+
+            <Button
+                style="@style/ButtonAccept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/frag_import_file_name_val"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="@dimen/frag_import_button_margin"
+                android:text="Выбрать файл"
+                android:id="@+id/fragment_import_button_select_file"/>
+
+            <Button
+                style="@style/ButtonAccept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_import_button_select_file"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="@dimen/frag_import_text_margin"
+                android:text="@string/fragment_import_button_to_reg"
+                android:id="@+id/fragment_import_button_to_reg"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

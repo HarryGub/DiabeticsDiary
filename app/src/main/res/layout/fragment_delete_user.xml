@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".loginactivity.deleteuser.DeleteUserFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <TextView
+                style="@style/TextBlackHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/frag_delete_header"
+                android:gravity="center"
+                android:id="@+id/frag_delete_header"/>
+
+            <TextView
+                style="@style/TextBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/frag_delete_body_text"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/frag_delete_header"
+                android:id="@+id/frag_delete_body_text"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/avatar_size_large"
+                android:layout_height="@dimen/avatar_size_large"
+                android:layout_marginTop="@dimen/text_body_top_margin"
+
+                app:layout_constraintTop_toBottomOf="@+id/frag_delete_body_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/frag_delete_avatar"
+                />
+
+            <TextView
+                android:textSize="@dimen/text_header_size"
+                style="@style/TextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/frag_delete_name"
+                app:layout_constraintTop_toBottomOf="@+id/frag_delete_avatar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/frag_delete_name"
+                />
+
+            <EditText
+                style="@style/TextColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/reg_frag_edit_text_passwd"
+                app:layout_constraintTop_toBottomOf="@id/frag_delete_name"
+                android:textSize="@dimen/text_body_size"
+                android:layout_marginTop="10dp"
+                android:id="@+id/frag_delete_edit_text_passwd"
+                android:inputType="textPassword"
+                android:maxLength="30"/>
+
+            <TextView
+                style="@style/TextNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/frag_delete_wrong_passwd"
+                android:id="@+id/frag_delete_wrong_passwd"
+                app:layout_constraintTop_toBottomOf="@id/frag_delete_edit_text_passwd"
+                android:visibility="gone"/>
+
+
+            <Button
+                style="@style/ButtonAccept"
+                app:layout_constraintTop_toBottomOf="@+id/frag_delete_edit_text_passwd"
+                android:text="@string/fragment_user_delete_confirm"
+                android:layout_marginTop="@dimen/button_accept_top_margin_little"
+                android:id="@+id/fragment_user_delete_button_delete"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+</FrameLayout>

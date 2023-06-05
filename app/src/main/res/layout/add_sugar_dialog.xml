@@ -1,0 +1,158 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/add_cal_dialog_root"
+    android:background="?android:windowBackground">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <TextView
+            style="@style/TextBlackUnconstrained"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/add_sugar_dialog_header"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            android:id="@+id/add_cal_sugar_dialog_header"/>
+
+        <TextView
+            style="@style/TextBlackUnconstrained"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/add_cal_sugar_dialog_date"
+            android:text="Дата:"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/add_cal_sugar_dialog_header"/>
+
+        <TextView
+            style="@style/TextBlackUnconstrained"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01.01.2000"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_cal_sugar_dialog_header"
+            android:id="@+id/add_cal_sugar_dialog_date_val"/>
+
+        <TextView
+            style="@style/TextBlackUnconstrained"
+            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_height="wrap_content"
+            android:text="Время:"
+            app:layout_constraintTop_toBottomOf="@+id/add_cal_sugar_dialog_date_val"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginVertical="10dp"
+            android:id="@+id/add_cal_sugar_dialog_time"/>
+
+        <TextView
+            style="@style/TextBlackUnconstrained"
+            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/add_cal_sugar_dialog_date_val"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/add_cal_sugar_dialog_time_val"/>
+
+        <TextView
+            style="@style/TextBlackUnconstrained"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Значение:"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/add_cal_sugar_dialog_time_val"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/add_cal_sugar_dialog_val"/>
+
+        <EditText
+            style="@style/TextBlackUnconstrained"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="00.0"
+            android:maxLength="4"
+            android:inputType="numberDecimal"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/add_cal_sugar_dialog_time_val"
+            app:layout_constraintRight_toLeftOf="@+id/add_cal_sugar_dialog_dimen"
+            android:id="@+id/add_cal_sugar_dialog_val_val"/>
+
+        <TextView
+            style="@style/TextBlackUnconstrained"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ммоль/л"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/add_cal_sugar_dialog_time_val"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/add_cal_sugar_dialog_dimen"/>
+
+        <TextView
+            style="@style/TextBlackUnconstrained"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/add_cal_sugar_dialog_val_val"
+            android:layout_marginVertical="10dp"
+            android:text="До еды? "
+            android:id="@+id/add_cal_sugar_dialog_is_before"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/add_cal_sugar_dialog_is_before"
+            android:layout_marginVertical="10dp"
+            android:id="@+id/add_cal_sugar_dialog_is_before_switch"/>
+
+        <EditText
+            style="@style/TextBlackUnconstrained"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:hint="Заметка"
+            app:layout_constraintTop_toBottomOf="@+id/add_cal_sugar_dialog_is_before_switch"
+            android:layout_marginVertical="10dp"
+            android:id="@+id/add_cal_sugar_dialog_note"/>
+
+        <Button
+            style="@style/ButtonPinkMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добавить"
+            android:layout_marginVertical="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/add_cal_sugar_dialog_note"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:minWidth="300dp"
+            android:id="@+id/add_cal_sugar_dialog_button"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>
